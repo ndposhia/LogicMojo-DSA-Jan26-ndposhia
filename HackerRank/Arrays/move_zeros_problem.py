@@ -16,7 +16,17 @@ import sys
 #
 
 def move_func(n, arr):
-    # Write your code here
+    i = 0
+    j = 0
+    while j < n:
+        if arr[j]!=0:
+            arr[i],arr[j] = arr[j],arr[i]
+            i+=1
+            j+=1
+        else:
+            j+=1
+    return arr
+            
 
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
